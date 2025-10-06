@@ -1,2 +1,22 @@
-.venv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# uv
 uv.lock
+.env
+
+# Airflow
+logs/
+plugins/
+config/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
