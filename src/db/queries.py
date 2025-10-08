@@ -14,7 +14,7 @@ def save_quality_metric(table_name: str, column_name: str, metric_type: str,
         VALUES (:table_name, :column_name, :metric_type, :metric_value, :source, :timestamp)
     """)
     
-    with engine.connect() as conn:
+    with engine.begin() as conn:  # Changed from connect() to begin()
         conn.execute(query, {
             'table_name': table_name,
             'column_name': column_name,
@@ -23,7 +23,6 @@ def save_quality_metric(table_name: str, column_name: str, metric_type: str,
             'source': source,
             'timestamp': datetime.now()
         })
-        conn.commit()
 
 def save_quality_issue(table_name: str, row_id: str, issue_type: str,
                       issue_description: str, severity: str = 'medium',
@@ -37,7 +36,7 @@ def save_quality_issue(table_name: str, row_id: str, issue_type: str,
         VALUES (:table_name, :row_id, :issue_type, :issue_description, :severity, :source, :timestamp)
     """)
     
-    with engine.connect() as conn:
+    with engine.begin() as conn:  # Changed from connect() to begin()
         conn.execute(query, {
             'table_name': table_name,
             'row_id': row_id,
@@ -47,7 +46,6 @@ def save_quality_issue(table_name: str, row_id: str, issue_type: str,
             'source': source,
             'timestamp': datetime.now()
         })
-        conn.commit()
 
 def get_latest_metrics(table_name: str = None, limit: int = 100):
     """Retrieve latest quality metrics"""
