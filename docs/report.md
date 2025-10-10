@@ -15,7 +15,7 @@
 
 ## 1. Data Mapping & Transformation Strategy
 
-![Data Mapping Diagram](../assets/images/mapping%20data%20quality%20project.drawio.png)
+![Data Mapping Diagram](../assets/images/mapping_data_quality_project.png)
 
 ### 1.1 Architectural Decision
 

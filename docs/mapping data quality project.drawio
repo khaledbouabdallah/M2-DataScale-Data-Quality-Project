@@ -1,0 +1,223 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0" version="28.2.5">
+  <diagram name="Page-1" id="1fBX4oc2-zpsnwYSRu4Z">
+    <mxGraphModel dx="1240" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-78" target="KUyDf_0w6a-3rjfviokZ-100" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-78" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Inner join on&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;CSP&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="398.5" width="110" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-79" value="&lt;div align=&quot;center&quot;&gt;&lt;blockquote style=&quot;margin-top: 180px;&quot;&gt;&lt;blockquote style=&quot;margin-top: 150px; padding-bottom: 0px;&quot;&gt;&lt;b&gt;Source S1 - Paris&lt;/b&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#999999;align=center;" parent="1" vertex="1">
+          <mxGeometry x="260" y="569" width="310" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-80" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;Consommation_IRIS_Paris&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_IRIS&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Conso_moyenne_annuelle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+          <mxGeometry x="990" y="20" width="160" height="66.5" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-81" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;Consommation_IRIS_Evry&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_IRIS&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Conso_moyenne_annuelle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+          <mxGeometry x="810" y="20" width="170" height="69.25" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-82" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;Consommation_CSP&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_CSP&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Conso_moyenne_annuelle&lt;br&gt;Salaire_Moyen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+          <mxGeometry x="30" y="54.5" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-83" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Population (s1)&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Nom&lt;br&gt;Prénom&lt;br&gt;Adresse&lt;br&gt;CSP&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="290" y="609" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.468;exitY=0.006;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-85" target="KUyDf_0w6a-3rjfviokZ-107" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="594.1885714285715" as="sourcePoint" />
+            <mxPoint x="729.6499999999999" y="433.8100000000002" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="472" y="560" />
+              <mxPoint x="561" y="560" />
+              <mxPoint x="730" y="559" />
+              <mxPoint x="730" y="509" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-85" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Consommation (s1)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Adr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;N&lt;br&gt;Nom_Rue&lt;br&gt;Code_Postal&lt;br&gt;NB_KW_Jour&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+          <mxGeometry x="420" y="609" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-86" value="&lt;div align=&quot;center&quot;&gt;&lt;blockquote style=&quot;margin-top: 180px;&quot;&gt;&lt;blockquote style=&quot;margin-top: 150px; padding-bottom: 0px;&quot;&gt;&lt;b&gt;Source S2 - Evry&lt;/b&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#999999;align=center;" parent="1" vertex="1">
+          <mxGeometry x="580" y="569" width="310" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-87" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Population (s2)&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Nom&lt;br&gt;Prénom&lt;br&gt;Adresse&lt;br&gt;CSP&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="610" y="609" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-89" target="KUyDf_0w6a-3rjfviokZ-107" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="935" y="509" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="800" y="609" />
+              <mxPoint x="800" y="560" />
+              <mxPoint x="825" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-89" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Consommation (s2)&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Adr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;N&lt;br&gt;Nom_Rue&lt;br&gt;Code_Postal&lt;br&gt;NB_KW_Jour&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+          <mxGeometry x="740" y="609" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-90" value="&lt;div style=&quot;margin-bottom: 10px; margin-top: 80px;&quot; align=&quot;center&quot;&gt;&lt;blockquote style=&quot;margin-top: 180px;&quot;&gt;&lt;blockquote style=&quot;margin-top: 150px; padding-bottom: 0px; margin-bottom: 20px;&quot;&gt;&lt;b&gt;Source S3 – Catégories socio-professionnelles&lt;/b&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#999999;align=center;" parent="1" vertex="1">
+          <mxGeometry x="20" y="569" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-92" target="KUyDf_0w6a-3rjfviokZ-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-92" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;CSP&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_CSP&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Desc&lt;br&gt;Salaire_Moyen&lt;br&gt;Salaire_Min&lt;br&gt;Salaire_Max&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
+          <mxGeometry x="100" y="609" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-93" value="&lt;div align=&quot;center&quot; style=&quot;margin-bottom: 10px; margin-top: 80px;&quot;&gt;&lt;blockquote style=&quot;margin-top: 180px;&quot;&gt;&lt;blockquote style=&quot;margin-top: 150px; padding-bottom: 0px; margin-bottom: 35px;&quot;&gt;&lt;b&gt;Source S4 – IRIS (Ilots Regroupés pour l&#39;Information Statistique)&lt;/b&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#999999;align=center;" parent="1" vertex="1">
+          <mxGeometry x="910" y="549" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="mPS2Ug6IVI88-0FV0Up5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="KUyDf_0w6a-3rjfviokZ-94" target="KUyDf_0w6a-3rjfviokZ-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-94" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;IRIS&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Rue&amp;nbsp;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Ville&lt;/b&gt;&lt;br&gt;ID_Iris&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
+          <mxGeometry x="980" y="560" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-96" target="KUyDf_0w6a-3rjfviokZ-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-96" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Population&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Source&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Nom&lt;br&gt;Prénom&lt;br&gt;Adresse&lt;br&gt;CSP&lt;br&gt;Source&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="190" y="379" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-98" target="KUyDf_0w6a-3rjfviokZ-116" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="330" />
+              <mxPoint x="700" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-98" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Consommation&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Adr_Source&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;N&lt;br&gt;Nom_Rue&lt;br&gt;Code_Postal&lt;br&gt;NB_KW_Jour&lt;br&gt;Source&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+          <mxGeometry x="645" y="353" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-100" target="KUyDf_0w6a-3rjfviokZ-110" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-100" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Population&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Nom&lt;br&gt;Prénom&lt;br&gt;Adresse&lt;br&gt;Source&lt;br&gt;CSP&lt;br&gt;Salaire_Moyen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="40" y="183.5" width="110" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KUyDf_0w6a-3rjfviokZ-102" target="KUyDf_0w6a-3rjfviokZ-110" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="134" />
+              <mxPoint x="600" y="339" />
+              <mxPoint x="415" y="339" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPS2Ug6IVI88-0FV0Up5-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.023;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="KUyDf_0w6a-3rjfviokZ-117">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="785.16" y="122.42" as="sourcePoint" />
+            <mxPoint x="930.0000000000001" y="471.94" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="835" y="122" />
+              <mxPoint x="835" y="472" />
+              <mxPoint x="930" y="472" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-102" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Consommation&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Adr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;N&lt;br&gt;Nom_Rue&lt;br&gt;Code_Postal&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;br&gt;NB_KW_Jour&lt;br&gt;Adress&lt;br&gt;Source&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+          <mxGeometry x="680" y="69" width="110" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-103" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Population&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Nom&lt;br&gt;Prénom&lt;br&gt;Adresse&lt;br&gt;Source&lt;br&gt;CSP&lt;br&gt;Salaire_Moyen&lt;br&gt;NB_KW_Jour&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+          <mxGeometry x="480" y="39" width="110" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-105" target="KUyDf_0w6a-3rjfviokZ-96" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-128" value="normalize adresse" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="KUyDf_0w6a-3rjfviokZ-104" connectable="0" vertex="1">
+          <mxGeometry x="-0.4308" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-105" value="&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Union + create source column&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="539" y="489" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-107" target="KUyDf_0w6a-3rjfviokZ-98" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-107" value="&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Union + create source column&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="790" y="489" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.014;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-87" target="KUyDf_0w6a-3rjfviokZ-105" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="509" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.014;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-83" target="KUyDf_0w6a-3rjfviokZ-105" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="560" />
+              <mxPoint x="435" y="560" />
+              <mxPoint x="435" y="509" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-110" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Inner join on&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Adress&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="360" y="208" width="110" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-112" target="KUyDf_0w6a-3rjfviokZ-82" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="99.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-112" value="&lt;div&gt;Group by on CSP&lt;/div&gt;&lt;div&gt;agg:&lt;/div&gt;&lt;div&gt;Average (NB_KW_Jour x 365)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="270" y="39" width="160" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.419;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-110" target="KUyDf_0w6a-3rjfviokZ-103" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.993;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-103" target="KUyDf_0w6a-3rjfviokZ-112" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="106" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-116" target="KUyDf_0w6a-3rjfviokZ-102" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-116" value="&lt;div&gt;create &#39;adresse&#39;&lt;/div&gt;&lt;div&gt;from N, Nom_Rue, Code_Postal&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="640" y="229" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mPS2Ug6IVI88-0FV0Up5-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="KUyDf_0w6a-3rjfviokZ-117" target="KUyDf_0w6a-3rjfviokZ-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-117" value="&lt;div&gt;Inner Join on&lt;/div&gt;&lt;div&gt;ID_RUE == Nom_Rue &amp;amp;, ID_Ville == Code_Postal&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="950" y="440" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-118" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Consommation&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Adr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ID_Rue&lt;/b&gt;&lt;br&gt;&lt;b&gt;ID_Ville&lt;/b&gt;&lt;br&gt;NB_KW_Jour&lt;br&gt;Adress&lt;br&gt;Source&lt;br&gt;ID_Iris&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+          <mxGeometry x="955" y="290" width="110" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KUyDf_0w6a-3rjfviokZ-119" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="890" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-123" value="Source = &quot;Evry&quot;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="KUyDf_0w6a-3rjfviokZ-122" connectable="0" vertex="1">
+          <mxGeometry x="0.2103" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-119" value="&lt;div&gt;Group by on&amp;nbsp;ID_Iris&lt;/div&gt;&lt;div&gt;agg:&lt;/div&gt;&lt;div&gt;Sum (NB_KW_Jour x 365)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="930" y="144.5" width="160" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.515;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-118" target="KUyDf_0w6a-3rjfviokZ-119" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.585;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="KUyDf_0w6a-3rjfviokZ-119" target="KUyDf_0w6a-3rjfviokZ-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KUyDf_0w6a-3rjfviokZ-126" value="Source = &quot;Paris&quot;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="KUyDf_0w6a-3rjfviokZ-124" connectable="0" vertex="1">
+          <mxGeometry x="-0.144" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
