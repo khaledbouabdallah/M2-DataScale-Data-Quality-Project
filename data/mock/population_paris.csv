@@ -1,0 +1,51 @@
+ID,Nom,Prenom,Adresse,CSP
+P0001,,Thomas,"43 Avenue des Champs-Élysées, 75002",5
+P0002,Richard,Claire,"136 Boulevard Haussmann, 75001",99
+P0003,Moreau,Sophie,"59 Boulevard Haussmann, 75002",
+P0004,Leroy,Luc,"44 Rue de la Paix, 75002",6
+P0005,Moreau,Julie,"175 Boulevard Haussmann, 75001",4
+P0006,Moreau,Claire,"81 Rue de la Paix, 75001",3
+P0007,Moreau,Pierre,"151 Rue de Rivoli, 75002",1
+P0008,Leroy,Pierre,,6
+P0009,Dubois,Nicolas,"103 Rue de la Paix, 75002",3
+P0010,Moreau,Luc,"24 Rue Victor Hugo, 75001",2
+P0011,Durand,Claire,"86 Rue Victor Hugo, 75002",5
+P0012,Petit,Emma,"118 Rue de la Paix, 75001",5
+P0013,Thomas,Emma,"125 Boulevard Haussmann, 75001",1
+P0014,Petit,Thomas,"180 Boulevard Haussmann, 75002",1
+P0015,Leroy,Claire,"78 Rue de la Paix, 75001",2
+P0016,Moreau,Julie,"20 Rue de Rivoli, 75002",4
+P0017,Martin,Nicolas,"153 Rue de Rivoli, 75001",1
+P0018,Richard,Emma,"54 Rue Victor Hugo, 75001",1
+P0019,Thomas,Nicolas,"120 Boulevard Haussmann, 75001",3
+P0020,Petit,Marie,,
+P0021,Moreau,Claire,"3 Rue Victor Hugo, 75001",1
+P0022,Thomas,Jean,"111 Rue de la Paix, 75001",1
+P0023,Petit,Thomas,"27 Rue de Rivoli, 75001",1
+P0024,Durand,Nicolas,"68 Boulevard Haussmann, 75001",3
+P0025,Thomas,Pierre,"44 Boulevard Haussmann, 75001",5
+P0026,Richard,Thomas,"154 Rue Victor Hugo, 75002",2
+P0027,Robert,Julie,"144 Rue Victor Hugo, 75001",5
+P0028,Robert,Luc,"101 Avenue des Champs-Élysées, 75001",1
+P0029,Bernard,Sophie,"11 Boulevard Haussmann, 75001",5
+P0030,Thomas,Luc,"25 Avenue des Champs-Élysées, 75002",6
+P0031,,Pierre,"32 Boulevard Haussmann, 75002",3
+P0032,Leroy,Emma,"144 Boulevard Haussmann, 75001",4
+P0033,Moreau,Pierre,"64 Rue de Rivoli, 75001",5
+P0034,Richard,Julie,"74 Avenue des Champs-Élysées, 75002",4
+P0035,Moreau,Claire,"159 Avenue des Champs-Élysées, 75002",6
+P0036,Richard,Pierre,"111 Avenue des Champs-Élysées, 75002",4
+P0037,Moreau,Nicolas,"174 Boulevard Haussmann, 75001",3
+P0038,Moreau,Marie,"160 Rue Victor Hugo, 75001",5
+P0039,Leroy,Emma,"161 Rue de la Paix, 75001",5
+P0040,Thomas,Thomas,,4
+P0041,,Claire,"61 Rue de la Paix, 75002",3
+P0042,Martin,Claire,"163 Rue Victor Hugo, 75002",6
+P0043,Martin,Marie,"103 Rue de la Paix, 75002",3
+P0044,Petit,Jean,"152 Rue de la Paix, 75001",5
+P0045,Dubois,Julie,"128 Boulevard Haussmann, 75001",1
+P0046,Robert,Julie,"30 Avenue des Champs-Élysées, 75001",4
+P0047,,Nicolas,"169 Avenue des Champs-Élysées, 75002",2
+P0048,Petit,Nicolas,"70 Avenue des Champs-Élysées, 75002",2
+P0049,Dubois,Nicolas,"139 Avenue des Champs-Élysées, 75002",
+P0050,Dubois,Marie,,1
