@@ -1,4 +1,7 @@
-"""Data quality check functions"""
+"""Data quality check functions
+Note: This version was used to test database integration.
+Needs to be changed once we work on the data quality.
+"""
 import pandas as pd
 from typing import Dict, List
 from src.db.queries import save_quality_metric, save_quality_issue

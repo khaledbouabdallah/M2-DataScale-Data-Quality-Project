@@ -20,3 +20,8 @@ uv.lock
 .vscode/
 .idea/
 *.swp
+
+# Data 
+/data/
+# except mock data
+!data/mock/

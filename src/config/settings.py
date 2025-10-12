@@ -31,11 +31,11 @@ CONSOMMATION_EVRY_FILE = DATA_SOURCE_DIR / "consommation_evry.csv"
 CSP_FILE = DATA_SOURCE_DIR / "csp_reference.csv"
 IRIS_FILE = DATA_SOURCE_DIR / "iris_reference.csv"
 
-# Target table names
-TARGET_TABLES = {
-    'csp': 'Consommation_CSP',
-    'iris_paris': 'Consommation_IRIS_Paris',
-    'iris_evry': 'Consommation_IRIS_Evry',
+# Target file paths
+TARGET_FILES = {
+    'csp': "consommation_csp.csv",
+    'iris_paris': "consommation_iris_paris.csv",
+    'iris_evry': "consommation_iris_evry.csv",
 }
 
 # Logging configuration

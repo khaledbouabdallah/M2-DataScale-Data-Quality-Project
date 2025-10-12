@@ -66,7 +66,7 @@ IRIS_SCHEMA = TableSchema(
         "ID_Iris": "string"
     },
     required_columns=["ID_Rue", "ID_Ville", "ID_Iris"],
-    primary_key="ID_Iris"
+    primary_key=["ID_Rue", "ID_Ville"]  # Composite key
 )
 
 # Target - Consommation_CSP
