@@ -11,9 +11,9 @@ uv.lock
 .env
 
 # Airflow
-logs/
-plugins/
-config/
+/logs/
+/plugins/
+/config/
 *.log
 
 # IDE
