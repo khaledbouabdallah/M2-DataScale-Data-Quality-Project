@@ -11,12 +11,17 @@ uv.lock
 .env
 
 # Airflow
-logs/
-plugins/
-config/
+/logs/
+/plugins/
+/config/
 *.log
 
 # IDE
 .vscode/
 .idea/
 *.swp
+
+# Data 
+/data/
+# except mock data
+!data/mock/

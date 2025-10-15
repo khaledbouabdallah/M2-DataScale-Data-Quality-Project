@@ -1,0 +1,51 @@
+ID,Nom,Prenom,Adresse,CSP
+E0001,Petit,Pierre,"58 Rue Victor Hugo, 91080",1
+E0002,Dubois,Emma,"20 Rue Victor Hugo, 91000",4
+E0003,Richard,Emma,"140 Boulevard Haussmann, 91000",5
+E0004,Leroy,Pierre,"39 Rue Victor Hugo, 91000",5
+E0005,Durand,Julie,"102 Avenue du Lac, 91000",5
+E0006,Robert,Thomas,,4
+E0007,Robert,Sophie,"200 Rue Victor Hugo, 91000",4
+E0008,Thomas,Claire,"30 Rue Victor Hugo, 91000",2
+E0009,Petit,Claire,"119 Avenue du Lac, 91000",4
+E0010,Thomas,Thomas,"130 Rue de la République, 91080",6
+E0011,,Emma,"62 Avenue des Champs-Élysées, 91080",1
+E0012,,Nicolas,"16 Avenue du Lac, 91080",5
+E0013,Leroy,Luc,"17 Rue Victor Hugo, 91080",4
+E0014,Durand,Emma,"141 Rue de la République, 91080",4
+E0015,Leroy,Claire,"139 Boulevard Haussmann, 91000",1
+E0016,Moreau,Julie,"22 Rue Victor Hugo, 91000",5
+E0017,Dubois,Claire,"74 Avenue des Champs-Élysées, 91000",
+E0018,Durand,Thomas,"114 Avenue des Champs-Élysées, 91000",2
+E0019,Martin,Jean,"185 Rue Victor Hugo, 91000",4
+E0020,Petit,Pierre,"153 Boulevard Haussmann, 91080",6
+E0021,Martin,Julie,"8 Rue Victor Hugo, 91000",4
+E0022,Thomas,Sophie,"102 Rue de la République, 91000",2
+E0023,Durand,Julie,"70 Rue Victor Hugo, 91080",1
+E0024,Durand,Jean,"36 Avenue des Champs-Élysées, 91000",3
+E0025,Bernard,Pierre,"99 Rue de la République, 91000",5
+E0026,,Luc,"174 Avenue du Lac, 91000",6
+E0027,Petit,Marie,"172 Avenue des Champs-Élysées, 91000",1
+E0028,Leroy,Julie,"152 Rue Victor Hugo, 91080",5
+E0029,Leroy,Nicolas,"159 Avenue du Lac, 91000",6
+E0030,Dubois,Luc,"134 Rue Victor Hugo, 91000",5
+E0031,Petit,Thomas,"184 Boulevard Haussmann, 91080",2
+E0032,Durand,Marie,"24 Boulevard Haussmann, 91000",3
+E0033,Moreau,Jean,"158 Rue Victor Hugo, 91080",3
+E0034,Robert,Emma,"151 Avenue des Champs-Élysées, 91080",5
+E0035,,Thomas,"196 Boulevard Haussmann, 91080",5
+E0036,Leroy,Julie,,2
+E0037,Thomas,Julie,"137 Rue Victor Hugo, 91000",4
+E0038,Dubois,Claire,"101 Boulevard Haussmann, 91080",1
+E0039,Richard,Claire,"154 Rue de la République, 91080",3
+E0040,Dubois,Thomas,"123 Rue de la République, 91000",5
+E0041,Richard,Julie,,6
+E0042,Dubois,Sophie,"198 Avenue du Lac, 91000",5
+E0043,Thomas,Claire,"147 Boulevard Haussmann, 91080",
+E0044,Durand,Emma,"36 Avenue des Champs-Élysées, 91000",1
+E0045,Dubois,Nicolas,"25 Boulevard Haussmann, 91000",
+E0046,,Nicolas,,4
+E0047,Thomas,Marie,"10 Rue de la République, 91000",6
+E0048,Durand,Nicolas,"195 Rue de la République, 91080",4
+E0049,Moreau,Nicolas,"49 Avenue du Lac, 91080",3
+E0050,Petit,Emma,"147 Rue Victor Hugo, 91000",
