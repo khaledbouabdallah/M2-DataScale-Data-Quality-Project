@@ -3,7 +3,7 @@
 # Projet Qualité des Données : ETL Consommation Énergétique
 
 **M2 DataScale 2025/2026** | Zoubida Kedad  
-**Équipe :** Khaled Bouabdallah, [Étudiant 2], [Étudiant 3]  
+**Équipe :** Khaled Bouabdallah, Théo Joly, Boualem Mokeddem  
 **Dernière mise à jour :** 2025-10-15
 
 ---
