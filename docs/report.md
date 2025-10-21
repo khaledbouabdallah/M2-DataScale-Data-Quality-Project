@@ -102,96 +102,63 @@ Toutes les jointures sont **INNER** (abandon des enregistrements non corresponda
 
 ---
 
-## 5. Plan d'Évaluation de la Qualité des Données
+## 5. Plan d’Évaluation de la Qualité des Données
 
 ### 5.1 Dimensions de Qualité Considérées
 
-Conformément aux problématiques identifiées dans le cahier des charges, nous évaluons **6 dimensions principales** :
+Les contrôles de qualité portent sur **4 dimensions principales** issues des besoins métiers et techniques du projet :
 
-1. **Complétude** : Présence de valeurs obligatoires (détection de valeurs NULL/manquantes)
-2. **Cohérence Syntaxique** : Conformité aux formats, domaines et codifications
-3. **Cohérence Sémantique** : Respect des règles métier et contraintes d'intégrité
-4. **Cohérence Inter-sources** : Homogénéité des échelles et unités entre Paris et Évry
-5. **Unicité** : Absence de doublons (clés primaires et doublons fonctionnels)
-6. **Exactitude** : Conformité au domaine (syntaxique) et au réel (sémantique)
+1. **Complétude** — Vérifie la présence des valeurs obligatoires (absence de NULL).  
+2. **Cohérence Syntaxique** — Contrôle le respect des formats, codifications et domaines de valeurs.  
+3. **Granularité** — Assure la bonne échelle et résolution des données agrégées ou détaillées.  
+4. **Doublons** — Garantit l’unicité des enregistrements et des clés.
+
+---
 
 ### 5.2 Catalogue de Métriques
 
-Nous avons défini **60 métriques de qualité** réparties comme suit :
-
 | Dimension | Nombre de Métriques | Préfixe ID | Priorité |
-|-----------|---------------------|------------|----------|
-| Complétude | 14 | C001-C014 | Obligatoire |
-| Cohérence Syntaxique | 12 | CS001-CS012 | Obligatoire |
-| Cohérence Sémantique | 5 | CSM001-CSM005 | Mixte |
-| Cohérence Inter-sources (Hétérogénéité) | 5 | H001-H005 | Obligatoire/Souhaitable |
-| Unicité | 6 | U001-U006 | Obligatoire |
-| Intégrité Référentielle | 4 | I001-I004 | Obligatoire |
-| Exactitude Syntaxique | 3 | ES001-ES003 | Obligatoire |
-| Exactitude Sémantique | 8 | ESM001-ESM008 | Mixte |
-| Traçabilité Pipeline | 4 | P001-P004 | Souhaitable |
+|------------|----------------------|-------------|-----------|
+| Complétude | 14 | C001–C014 | Obligatoire |
+| Cohérence Syntaxique | 9 | CS001–CS009 | Obligatoire |
+| Granularité | 1 | G001 | Obligatoire |
+| Doublons | 1 | D001 | Souhaitable |
 
-**📊 Référence détaillée :** Voir le [catalogue complet des métriques](https://docs.google.com/spreadsheets/d/1EMn20Nz59Zi2Ow3V7qbwecvCvc7GfjbW31TBZNTFgeU/edit?usp=sharing) pour les détails d'implémentation, seuils et actions correctrices.
+**📂 Source :** Fichier [`quality_metrics.csv`](quality_metrics.csv)   
+**📊 Détail complet :** chaque métrique correspond à une implémentation SQL décrite dans la colonne `Description_Implémentation`.
 
-### 5.3 Métriques Prioritaires par Problématique
+---
 
-#### 📋 **Conformité à un Format, une Codification**
-**Métriques clés :**
-- `CS001-CS002` : Format ID (P0001, E0001)
-- `CS003` : Domaine CSP (valeurs 1-6)
-- `CS004-CS005` : Format code postal (75xxx, 91xxx)
-- `CS011-CS012` : Validité géographique des codes postaux
+### 5.3 Catalogue Détail des Métriques
 
-**Exemple :** Détection de codes CSP invalides comme "99" au lieu de 1-6.
+#### Complétude (`C001–C014`)
+- Vérifie la présence de données dans les champs critiques des tables `Population` et `Consommation`.  
+- Exemples :
+  - `C001` : `Adresse` non nulle dans `Population`
+  - `C002` : `CSP` non nul dans `Population`
+  - `C003–C005` : `N`, `Nom_Rue`, `Code_Postal` non nuls dans `Consommation`
+- Type : Contrôle colonne  
+- Phase : Source  
 
-#### ⚖️ **Hétérogénéité des Échelles et Granularité**
-**Métriques clés :**
-- `H001` : **Échelle kWh S1/S2** - Ratio des moyennes Paris/Évry (détecte facteur 1000 : kWh vs Wh)
-- `H002` : Coefficient de variation des salaires CSP
-- `H003-H004` : Tests statistiques (Chi², Kolmogorov-Smirnov) pour comparer distributions
-- `H005` : Différence relative des moyennes inter-sources
+#### Cohérence Syntaxique (`CS001–CS009`)
+- Vérifie la conformité des formats et des domaines (codes postaux, formats d’identifiants, codifications CSP, etc.).  
+- Implémentations sous forme d’expressions SQL régulières ou de règles de validation.  
+- Phase : Source  
 
-**Exemple :** Si MEAN(Paris) / MEAN(Évry) > 2.0 → alerte échelle différente (kWh vs Wh).
+#### Granularité (`G001`)
+- Vérifie l’échelle et la précision des données agrégées (ex. Toute les consommations en kW/H ?).  
+- Phase : Transformation  
 
-#### ✅ **Complétude des Données**
-**Métriques clés :**
-- `C001-C010` : Valeurs NULL par colonne (seuils variables selon criticité)
-- `C011-C012` : Complétude des tables de référence (CSP, IRIS)
-- `C013-C014` : Complétude des tables cibles après transformation
+#### Doublons (`D001`)
+- Détecte les doublons exacts ou fonctionnels dans les identifiants uniques.  
+- Méthode : groupement + comptage d’occurrences > 1  
+- Phase : Cible  
 
-**Seuils :**
-- Obligatoire (ID, NB_KW_Jour) : 0% NULL toléré
-- Critique (Adresse, CSP) : < 5% NULL
-- Souhaitable (Nom, Prénom) : < 10% NULL
+---
 
-#### 🔄 **Détection et Élimination de Doublons**
-**Métriques clés :**
-- `U001-U004` : Unicité des clés primaires (ID, ID_Adr, ID_CSP, ID_IRIS)
-- `U005-U006` : Doublons fonctionnels (même personne/adresse, IDs différents)
+### 5.4 Architecture de Contrôle
 
-**Exemple :** Détecter "Jean Martin, 10 Rue Victor Hugo, 75001" présent 2 fois avec IDs différents.
-
-### 5.4 Métriques Additionnelles Essentielles
-
-#### 🔗 **Intégrité Référentielle**
-- `I001` : Tous les codes CSP existent dans la table de référence
-- `I002` : Adresses Consommation valides dans IRIS
-- `I003-I004` : Taux de réussite des jointures (> 80%)
-
-#### 📏 **Exactitude Sémantique (Conformité au Réel)**
-- `ESM001-ESM003` : Détection d'outliers (Z-score, IQR)
-- `ESM004` : Salaires réalistes comparés au référentiel INSEE
-- `ESM005` : Corrélation positive Salaire-Consommation attendue
-- `ESM006-ESM008` : Couverture complète des CSP et zones IRIS
-
-#### 📈 **Traçabilité du Pipeline**
-- `P001-P002` : Perte de données entre entrée et sortie (< 20%)
-- `P003` : Validation de l'agrégation (somme détails ≈ agrégat)
-- `P004` : Présence de la colonne `Source` après union
-
-### 5.5 Implémentation des Contrôles
-
-**Architecture de validation :**
+**Pipeline de validation :**
 ```
 Source Data → Validation Layer → Transformation → Validation Layer → Target
      ↓                                                        ↓
@@ -203,29 +170,26 @@ Source Data → Validation Layer → Transformation → Validation Layer → Tar
   Streamlit Dashboard
 ```
 
-**Exemples de contrôles automatisés :**
+---
 
-```python
-# Hétérogénéité des échelles (H001)
-mean_paris = df[df['Source'] == 'Paris']['NB_KW_Jour'].mean()
-mean_evry = df[df['Source'] == 'Evry']['NB_KW_Jour'].mean()
-ratio = mean_paris / mean_evry
+### 5.5 Exemples d’Implémentation SQL
 
-if not (0.5 <= ratio <= 2.0):
-    save_quality_issue(
-        issue_type='scale_heterogeneity',
-        severity='high',
-        description=f'Ratio moyennes Paris/Evry = {ratio:.2f}'
-    )
+```sql
+-- Complétude (C001)
+SELECT
+  COUNT(*) FILTER (WHERE Adresse IS NULL)::float / COUNT(*) * 100 AS taux_null_adresse
+FROM population;
 
-# Intégrité référentielle CSP (I001)
-invalid_csp = df[~df['CSP'].isin(csp_reference['ID_CSP'])]
-if len(invalid_csp) > 0:
-    save_quality_issue(
-        issue_type='referential_integrity',
-        severity='high',
-        description=f'{len(invalid_csp)} codes CSP invalides détectés'
-    )
+-- Cohérence Syntaxique (CS001)
+SELECT *
+FROM consommation
+WHERE Code_Postal NOT LIKE '75%' AND Code_Postal NOT LIKE '91%';
+
+-- Doublons (D001)
+SELECT ID, COUNT(*) AS nb
+FROM population
+GROUP BY ID
+HAVING COUNT(*) > 1;
 ```
 
 ---
