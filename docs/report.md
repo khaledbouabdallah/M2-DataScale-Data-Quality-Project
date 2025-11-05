@@ -58,30 +58,63 @@ Split par Source → Cible Paris, Cible Évry
 
 ---
 
+## 3. Implémentation des mappings
+
+### Copie d'écran de l'implémentation du job
+
+![Implémentation de Mapping](../assets/images/implementation_mapping.png)
+
+L’implémentation des mappings a été réalisée à l’aide de l’ETL Talend.
+
+### Problèmes rencontrés
+
+Lors de l’implémentation, plusieurs difficultés ont été rencontrées :
+
+- Formatage des adresses :  
+Les adresses n’étaient pas uniformes entre les différentes sources. Nous avons donc choisi de les décomposer en plusieurs champs : numéro, nom de rue, ville et code postal.  
+Nous avons également supprimé les accents, converti l’ensemble en minuscules et traité les cas particuliers où certaines adresses étaient manquantes.  
+De plus, certains numéros de rue contenaient des lettres ou des suffixes tels que A, B, C, BIS ou TER, ce qui a nécessité un traitement spécifique.
+
+- Codes postaux :  
+Le format des codes postaux n’était pas toujours conforme : certains contenaient un caractère en trop ou n’étaient pas composés de cinq chiffres.
+
+- CSP (Catégorie Socio-Professionnelle) :  
+Nous avons dû gérer deux cas distincts selon les sources :
+  - l’une faisait référence à l’identifiant du CSP,
+  - l’autre à la description (le nom) du CSP.  
+Il a donc fallu établir une correspondance entre ces deux formats à l’aide de la table de référence CSP.
+
+- Échelles de consommation :  
+Les valeurs de consommation n’étaient pas exprimées dans la même unité : certaines en Watt (W), d’autres en Kilowatt (kW). Une mise à l’échelle a donc été effectuée pour harmoniser les données.
+
+- Normalisation des chaînes de caractères :  
+Avant d’effectuer les jointures, toutes les chaînes ont été converties en minuscules et les accents supprimés afin d’éviter les divergences lors des comparaisons.
+
+- Problèmes de jointure sur les noms de rue :  
+Les formats différaient selon les sources : certaines ne contenaient que le nom de la rue, tandis que d’autres incluaient le type de voie (rue, boulevard, allée, etc.). Ce décalage a nécessité un nettoyage et une harmonisation supplémentaires avant la jointure.
+
+
 ## 4. Règles de Transformation
 
-### Normalisation des Adresses
-```python
-# Côté Consommation
-Adresse = f"{N} {Nom_Rue}, {Code_Postal}"
+### Séparation des composants d’adresse
 
-# Des deux côtés
-Adresse = Adresse.strip().lower()
-Nom_Rue = Nom_Rue.strip().lower()
-Code_Postal = Code_Postal.strip()
-```
+Pour harmoniser les données, les adresses ont été nettoyées puis décomposées en quatre éléments : numéro, nom de rue, ville et code postal.
 
-### Agrégations
-```sql
--- Consommation_CSP
-GROUP BY CSP
-  AVG(NB_KW_Jour * 365) as Conso_moyenne_annuelle
-  MAX(Salaire_Moyen) as Salaire_Moyen  -- Valeur de référence, non moyennée
+1. Nettoyage  
+Avant l’extraction, les adresses ont été normalisées :
+- suppression des accents, guillemets et espaces inutiles,
+- uniformisation des majuscules/minuscules,
+- correction des séparateurs (espaces, virgules).
 
--- Consommation_IRIS
-GROUP BY ID_IRIS  
-  SUM(NB_KW_Jour * 365) as Conso_moyenne_annuelle  -- Consommation totale de la zone
-```
+2. Extraction  
+À l’aide d’expressions régulières :
+- le code postal est identifié comme une suite de cinq chiffres ;
+- le numéro de voie correspond à une suite de 1 à 4 chiffres, éventuellement suivie de bis, ter ou d’une lettre ;
+- la ville est extraite selon sa position relative au code postal ou déduite de celui-ci (ex. 75 → Paris, 69 → Lyon) ;
+- le nom de rue est obtenu après suppression des autres éléments, puis les abréviations de type de voie (av, bd, r, pl, etc.) sont remplacées par leur forme complète.
+
+3. Gestion des cas particuliers  
+Des règles de substitution complètent les valeurs manquantes (ex. déduction du code postal à partir de la ville) et garantissent une structure d’adresse uniforme.
 
 ### Stratégie de Jointure
 Toutes les jointures sont **INNER** (abandon des enregistrements non correspondants) :
