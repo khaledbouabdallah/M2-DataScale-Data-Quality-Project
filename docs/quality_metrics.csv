@@ -5,14 +5,14 @@ C003,conso_num_rue_non_null,Complétude,Colonne,Consommation,N,Source,COUNT(N IS
 C004,conso_nom_rue_non_null,Complétude,Colonne,Consommation,Nom_Rue,Source,COUNT(Nom_Rue IS NOT NULL) / COUNT(*) * 100
 C005,conso_cp_non_null,Complétude,Colonne,Consommation,Code_Postal,Source,COUNT(Code_Postal IS NOT NULL) / COUNT(*) * 100
 C006,conso_kwh_non_null,Complétude,Colonne,Consommation,NB_KW_Jour,Source,COUNT(NB_KW_Jour IS NOT NULL) / COUNT(*) * 100
-C007,csp_ref_id,Complétude,Table,CSP,ID_CSP,Source,COUNT(*) WHERE any column IS NOT NULL
-C008,csp_ref_salaire_moyen,Complétude,Column,CSP,Salaire_Moyen,Source,COUNT(*) WHERE  Salaire_Moyen IS NOT NULL
-C009,csp_ref_desc,Complétude,Column,CSP,Desc,Source,COUNT(*) WHERE  Desc IS NOT NULL
-C010,iris_ref_id_rue,Complétude,Column,IRIS,ID_Rue,Source,COUNT(*) WHERE  ID_Rue IS NOT NULL
-C011,iris_ref_id_ville,Complétude,Column,IRIS,ID_Ville,Source,COUNT(*) WHERE  ID_Ville IS NOT NULL
-C012,id_ref_ris,Complétude,Column,IRIS,ID_Iris,Source,COUNT(*) WHERE  ID_Iris IS NOT NULL
-C013,target_iris_complet,Complétude,Table,Consommation_IRIS,ID_IRIS|Conso_moyenne_annuelle,Cible,COUNT(*) WHERE any column IS NOT NULL
-C014,target_csp_complet,Complétude,Table,Consommation_CSP,ID_CSP|Conso_moyenne_annuelle|Salaire_Moyen,Cible,COUNT(*) WHERE any column IS NOT NULL
+C007,csp_ref_id,Complétude,Table,CSP,ID_CSP,Source,COUNT(*) WHERE any column IS NOT NULL / COUNT(*) * 100
+C008,csp_ref_salaire_moyen,Complétude,Column,CSP,Salaire_Moyen,Source,COUNT(*) WHERE  Salaire_Moyen IS NOT NULL / COUNT(*) * 100
+C009,csp_ref_desc,Complétude,Column,CSP,Desc,Source,COUNT(*) WHERE  Desc IS NOT NULL / COUNT(*) * 100
+C010,iris_ref_id_rue,Complétude,Column,IRIS,ID_Rue,Source,COUNT(*) WHERE  ID_Rue IS NOT NULL / COUNT(*) * 100
+C011,iris_ref_id_ville,Complétude,Column,IRIS,ID_Ville,Source,COUNT(*) WHERE  ID_Ville IS NOT NULL / COUNT(*) * 100
+C012,id_ref_ris,Complétude,Column,IRIS,ID_Iris,Source,COUNT(*) WHERE  ID_Iris IS NOT NULL / COUNT(*) * 100
+C013,target_iris_complet,Complétude,Table,Consommation_IRIS,ID_IRIS|Conso_moyenne_annuelle,Cible,COUNT(*) WHERE any column IS NOT NULL / COUNT(*) * 100
+C014,target_csp_complet,Complétude,Table,Consommation_CSP,ID_CSP|Conso_moyenne_annuelle|Salaire_Moyen,Cible,COUNT(*) WHERE any column IS NOT NULL / COUNT(*) * 100
 CS001,conso_num_rue_positif,Cohérence Syntaxique,Colonne,Consommation,N,Source,N IS INTEGER AND N > 0
 CS002,conso_kwh_positif,Cohérence Syntaxique,Colonne,Consommation,NB_KW_Jour,Source,NB_KW_Jour >= 0
 CS003,cp_geo_valide_paris,Cohérence Syntaxique,Colonne,Consommation,Code_Postal,Source,Code_Postal BETWEEN 75001 AND 75020
@@ -29,3 +29,4 @@ D001,conso_uni_adresse,Doublons,Colonne,Consommation,Adresse,Inter, COUNT(Adress
 ,,,,,,,
 
 ,,,,3,,,
+
