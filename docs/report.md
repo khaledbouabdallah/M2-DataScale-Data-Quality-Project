@@ -3,7 +3,7 @@
 # Projet Qualité des Données : ETL Consommation Énergétique
 
 **M2 DataScale 2025/2026** | Zoubida Kedad  
-**Équipe :** Khaled Bouabdallah, Théo Joly, Mohammed Nassim Fellah, Sarah Boundaoui
+**Équipe :** Khaled Bouabdallah, Théo Joly, Mohammed Nassim Fellah, Sarah Boundaoui  
 **Dernière mise à jour :** 2025-10-15
 
 ---
@@ -55,17 +55,6 @@ Group by ID_IRIS → SUM(consommation)
    ↓
 Split par Source → Cible Paris, Cible Évry
 ```
-
----
-
-## 3. Hypothèses Critiques
-
-| Composant | Hypothèse | Risque si Faux | Mitigation |
-|-----------|-----------|----------------|------------|
-| **Jointure IRIS** | `ID_Rue` = nom de rue (texte), `ID_Ville` = code postal (texte) | Besoin d'une table de correspondance | Confirmé par l'enseignante |
-| **Correspondance Adresse** | Le format Population correspond à la concaténation Consommation | Échec de jointure | Normalisation des chaînes (trim, minuscules) |
-| **Cardinalité** | Relation 1:1 entre adresse et consommation | Agrégation incorrecte | Validation lors du profilage |
-| **Codes CSP** | Tous les Population.CSP existent dans la table de référence CSP | Perte de données par INNER JOIN | Tracer les enregistrements supprimés |
 
 ---
 
@@ -156,56 +145,6 @@ Les contrôles de qualité portent sur **4 dimensions principales** issues des b
 
 ---
 
-### 5.4 Architecture de Contrôle
-
-**Pipeline de validation :**
-```
-Source Data → Validation Layer → Transformation → Validation Layer → Target
-     ↓                                                        ↓
-  Métriques                                              Métriques
-  + Issues                                               + Issues
-     ↓                                                        ↓
-  PostgreSQL (data_quality.metrics / data_quality.issues)
-     ↓
-  Streamlit Dashboard
-```
-
----
-
-### 5.5 Exemples d’Implémentation SQL
-
-```sql
--- Complétude (C001)
-SELECT
-  COUNT(*) FILTER (WHERE Adresse IS NULL)::float / COUNT(*) * 100 AS taux_null_adresse
-FROM population;
-
--- Cohérence Syntaxique (CS001)
-SELECT *
-FROM consommation
-WHERE Code_Postal NOT LIKE '75%' AND Code_Postal NOT LIKE '91%';
-
--- Doublons (D001)
-SELECT ID, COUNT(*) AS nb
-FROM population
-GROUP BY ID
-HAVING COUNT(*) > 1;
-```
-
----
-
-## 6. Stack Technique
-
-| Composant | Outil | Objectif |
-|-----------|-------|----------|
-| Orchestration | Apache Airflow | Planification des workflows |
-| Traitement | Python + Pandas | Transformation de données |
-| Contrôles Qualité | Scripts personnalisés | Logique de validation |
-| Stockage | PostgreSQL | Base de données métriques |
-| Visualisation | Streamlit | Tableau de bord (optionnel) |
-
----
-
 ## 7. Risques Identifiés
 
 | Risque | Sévérité | Statut |
@@ -226,4 +165,3 @@ HAVING COUNT(*) > 1;
 3. Distribution des valeurs NULL
 4. Fréquence des adresses dupliquées (affecte l'hypothèse de cardinalité)
 5. Unités réelles de consommation (kWh/jour vs Wh/jour) entre Paris et Évry
-
