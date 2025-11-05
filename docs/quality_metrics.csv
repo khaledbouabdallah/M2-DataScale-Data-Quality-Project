@@ -6,22 +6,18 @@ C004,conso_nom_rue_non_null,Complétude,Colonne,Consommation,Nom_Rue,Source,COUN
 C005,conso_cp_non_null,Complétude,Colonne,Consommation,Code_Postal,Source,COUNT(Code_Postal IS NOT NULL) / COUNT(*) * 100
 C006,conso_kwh_non_null,Complétude,Colonne,Consommation,NB_KW_Jour,Source,COUNT(NB_KW_Jour IS NOT NULL) / COUNT(*) * 100
 C007,csp_ref_id,Complétude,Table,CSP,ID_CSP,Source,COUNT(*) WHERE any column IS NOT NULL / COUNT(*) * 100
-C008,csp_ref_salaire_moyen,Complétude,Column,CSP,Salaire_Moyen,Source,COUNT(*) WHERE  Salaire_Moyen IS NOT NULL / COUNT(*) * 100
-C009,csp_ref_desc,Complétude,Column,CSP,Desc,Source,COUNT(*) WHERE  Desc IS NOT NULL / COUNT(*) * 100
-C010,iris_ref_id_rue,Complétude,Column,IRIS,ID_Rue,Source,COUNT(*) WHERE  ID_Rue IS NOT NULL / COUNT(*) * 100
-C011,iris_ref_id_ville,Complétude,Column,IRIS,ID_Ville,Source,COUNT(*) WHERE  ID_Ville IS NOT NULL / COUNT(*) * 100
-C012,id_ref_ris,Complétude,Column,IRIS,ID_Iris,Source,COUNT(*) WHERE  ID_Iris IS NOT NULL / COUNT(*) * 100
+C008,csp_ref_salaire_moyen,Complétude,Colonne,CSP,Salaire_Moyen,Source,COUNT(*) WHERE Salaire_Moyen IS NOT NULL / COUNT(*) * 100
+C009,csp_ref_desc,Complétude,Colonne,CSP,Desc,Source,COUNT(*) WHERE Desc IS NOT NULL / COUNT(*) * 100
+C010,iris_ref_id_rue,Complétude,Colonne,IRIS,ID_Rue,Source,COUNT(*) WHERE ID_Rue IS NOT NULL / COUNT(*) * 100
+C011,iris_ref_id_ville,Complétude,Colonne,IRIS,ID_Ville,Source,COUNT(*) WHERE ID_Ville IS NOT NULL / COUNT(*) * 100
+C012,id_ref_ris,Complétude,Colonne,IRIS,ID_Iris,Source,COUNT(*) WHERE ID_Iris IS NOT NULL / COUNT(*) * 100
 CS001,conso_num_rue_positif,Cohérence Syntaxique,Colonne,Consommation,N,Source,COUNT(WHERE N IS INTEGER AND N > 0) / COUNT(*) * 100
 CS002,conso_kwh_positif,Cohérence Syntaxique,Colonne,Consommation,NB_KW_Jour,Source,COUNT(WHERE NB_KW_Jour >= 0) / COUNT(*) * 100
 CS003,cp_geo_valide_paris,Cohérence Syntaxique,Colonne,Consommation,Code_Postal,Source,COUNT(WHERE Code_Postal BETWEEN 75001 AND 75020) / COUNT(*) * 100
 CS004,cp_geo_valide_evry,Cohérence Syntaxique,Colonne,Consommation,Code_Postal,Source,COUNT(Code_Postal BETWEEN 91000 AND 91099) / COUNT(*) * 100
 CS005,pop_csp_domaine1,Cohérence Syntaxique,Colonne,Population1,CSP,Source,COUNT(WHERE CSP IN (CSP.desc)) / COUNT(*) * 100
-CS006,pop_csp_domaine2,Cohérence Syntaxique,Colonne,Population2,CSP,Source,COUNT(WHERE CSP IN (1,2,3,4,5,6) / COUNT(*) * 100
-CS007,adresse_format_standard_paris,Cohérence Syntaxique,Colonne,Population1,Adresse,Source,COUNT(WHERE Format correspond à 'Ville, N Nom_Rue') / COUNT(*) * 100
-CS008,adresse_format_standard_evry,Cohérence Syntaxique,Colonne,Population2,Adresse,Source,COUNT(WHERE Format correspond à 'Ville,Code_postal, N Nom_Rue') / COUNT(*) * 100
+CS006,pop_csp_domaine2,Cohérence Syntaxique,Colonne,Population2,CSP,Source,COUNT(WHERE CSP IN (1,2,3,4,5,6)) / COUNT(*) * 100
+CS007,adresse_format_standard_paris,Cohérence Syntaxique,Colonne,Population1,Adresse,Source,"COUNT(WHERE Format correspond à 'Ville, N Nom_Rue') / COUNT(*) * 100"
+CS008,adresse_format_standard_evry,Cohérence Syntaxique,Colonne,Population2,Adresse,Source,"COUNT(WHERE Format correspond à 'Ville,Code_postal, N Nom_Rue') / COUNT(*) * 100"
 G001,echelle_kwh_s1_s2,Granularité,Colonne,"Consommation1, Consommation 2",NB_KW_Jour,Source,MEAN(S1.NB_KW_Jour) / MEAN(S2.NB_KW_Jour) IS BETWEEN 0.1 AND 10.0 (OUTPUT => TRUE OR FALSE)
-D001,conso_uni_adresse,Doublons,Colonne,Consommation,Adresse,Inter, (COUNT(N, Nom_Rue, Code_Postal) - COUNT(DISTINCT (N, Nom_Rue, Code_Postal))) / COUNT(*) * 100
-
-
-
-
+D001,conso_uni_adresse,Doublons,Colonne,Consommation,Adresse,Inter,"(COUNT(N, Nom_Rue, Code_Postal) - COUNT(DISTINCT (N, Nom_Rue, Code_Postal))) / COUNT(*) * 100"
