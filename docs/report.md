@@ -232,8 +232,65 @@ Cette logique s'applique aussi aux autres dimensions. Pour la cohérence syntaxi
 
 ---
 
-## 5. Résultats Qualité des données
+## 5. Résultats des Métriques de Qualité
 
+### Vue d'ensemble
+
+| Dimension | Total Métriques | Résultat Global |
+|-----------|-----------------|-----------------|
+| Complétude | 12 | Acceptable (83-100%) |
+| Cohérence Syntaxique | 8 | Problématique (25-100%) |
+| Granularité | 1 | Échec (FALSE) |
+| Doublons | 1 | OK (0%) |
+
+### Complétude - Qualité Acceptable
+
+Les données sources sont globalement complètes avec 10 métriques au-dessus de 90%. Deux points d'attention:
+
+- **C007 et C008 (83,33%)**: Tables CSP de référence incomplètes sur ID_CSP et Salaire_Moyen. Environ 17% des lignes manquent ces informations, ce qui peut limiter les jointures et analyses par catégorie socioprofessionnelle.
+- **C006 (80%)**: 20% des enregistrements Consommation n'ont pas de valeur NB_KW_Jour. Problème modéré mais acceptable si ces lignes correspondent à des compteurs inactifs.
+
+Les colonnes critiques pour les jointures (Code_Postal, adresses, identifiants IRIS) sont toutes à 100%.
+
+### Cohérence Syntaxique - Problèmes Majeurs Détectés
+
+**Codes postaux hors normes:**
+- **CS003 (48%)**: Seulement 48% des codes postaux sont dans la plage Paris (75001-75020)
+- **CS004 (36%)**: Seulement 36% sont dans la plage Evry (91000-91099)
+
+Ces résultats indiquent une contamination importante des données par d'autres zones géographiques ou des erreurs de saisie. Plus de la moitié des données ne correspondent pas aux périmètres géographiques attendus. Impact direct sur la fiabilité des agrégations par IRIS.
+
+**CSP non conformes:**
+- **CS005 (25%)**: Seulement 25% des CSP de Population1 correspondent aux valeurs de la table de référence
+
+75% des catégories socioprofessionnelles ne matchent pas avec le référentiel. Cela rend impossible une jointure fiable entre Population et CSP de référence pour récupérer les salaires moyens.
+
+**Formats d'adresse:**
+- **CS008 (58,33%)**: Format Evry non standard sur 42% des adresses
+
+**Validations positives:**
+- CS002 (80%): Consommations positives correctes
+- CS006 (100%): CSP Population2 conformes au domaine numérique
+- CS007 (100%): Format Paris respecté
+
+### Granularité - Échec Critique
+
+**G001 (FALSE)**: Le ratio des consommations moyennes entre Consommation1 et Consommation2 est hors de la plage [0.1, 10].
+
+Les deux sources utilisent des unités ou échelles différentes (probablement Wh vs kWh ou kWh vs MWh). Les données ne peuvent pas être agrégées directement sans transformation. Il faut identifier quelle source utilise quelle unité et appliquer un facteur de conversion avant toute consolidation.
+
+### Doublons - Aucun Problème
+
+**D001 (0%)**: Aucun doublon détecté sur les adresses dans Consommation.
+
+Chaque combinaison (N, Nom_Rue, Code_Postal) est unique. Les données sont propres de ce point de vue.
+
+### Recommandations Prioritaires
+
+1. **Urgent**: Corriger le problème d'échelle des consommations (G001) avant toute agrégation
+2. **Important**: Investiguer la source des codes postaux hors périmètre (CS003, CS004) - possible mélange de datasets
+3. **Important**: Vérifier le mapping CSP entre Population1 et la table de référence (CS005)
+4. **Souhaitable**: Compléter les tables de référence CSP (C007, C008)
 
 ---
 
