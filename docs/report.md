@@ -261,7 +261,7 @@ Les colonnes critiques pour les jointures (Code_Postal, adresses, identifiants I
 Ces résultats indiquent une contamination importante des données par d'autres zones géographiques ou des erreurs de saisie. Plus de la moitié des données ne correspondent pas aux périmètres géographiques attendus. Impact direct sur la fiabilité des agrégations par IRIS.
 
 **CSP non conformes:**
-- **CS005 (25%)**: Seulement 25% des CSP de Population1 correspondent aux valeurs de la table de référence
+- **CS005 (25%)**: Seulement 25% des CSP de Population_Paris correspondent aux valeurs de la table de référence
 
 75% des catégories socioprofessionnelles ne matchent pas avec le référentiel. Cela rend impossible une jointure fiable entre Population et CSP de référence pour récupérer les salaires moyens.
 
@@ -270,12 +270,12 @@ Ces résultats indiquent une contamination importante des données par d'autres 
 
 **Validations positives:**
 - CS002 (80%): Consommations positives correctes
-- CS006 (100%): CSP Population2 conformes au domaine numérique
+- CS006 (100%): CSP Population_Evry conformes au domaine numérique
 - CS007 (100%): Format Paris respecté
 
 ### Granularité - Échec Critique
 
-**G001 (FALSE)**: Le ratio des consommations moyennes entre Consommation1 et Consommation2 est hors de la plage [0.1, 10].
+**G001 (FALSE)**: Le ratio des consommations moyennes entre Consommation_Paris et Consommation_Evry est hors de la plage [0.1, 10].
 
 Les deux sources utilisent des unités ou échelles différentes (probablement Wh vs kWh ou kWh vs MWh). Les données ne peuvent pas être agrégées directement sans transformation. Il faut identifier quelle source utilise quelle unité et appliquer un facteur de conversion avant toute consolidation.
 
@@ -296,3 +296,19 @@ Chaque combinaison (N, Nom_Rue, Code_Postal) est unique. Les données sont propr
 
 ## 6. Amélioration
 
+### Amélioration de la complétude
+
+La complétude des données concerne les valeurs manquantes (null). Malheureusement, il n’est pas possible d’améliorer cette dimension sans disposer de sources externes ou de règles de déduction fiables. En d’autres termes, on ne peut pas créer ou deviner des valeurs à partir de données inexistantes.
+
+### Amélioration de la cohérence syntaxique
+
+Concernant la cohérence syntaxique, certaines anomalies ont été observées dans les tables de consommation, notamment au niveau des codes postaux (erreurs de saisie, caractères parasites, zéros en trop, etc.).
+Pour corriger ces problèmes, on peut appliquer un nettoyage automatique à l’aide d’expressions régulières : elles permettraient de repérer les schémas de type 75--- ou 91--- et de supprimer les caractères indésirables ou les zéros surnuméraires, qu’ils se trouvent en début, au milieu ou à la fin de la chaîne.
+
+Dans la table Population_Paris, les valeurs de la variable CSP ne correspondent pas toujours aux intitulés de la table de référence CSP. Ces incohérences peuvent provenir de variations de genre (masculin/féminin), de nombre (singulier/pluriel) ou de fautes de frappe.
+Pour corriger cela, nous avons mis en place une détection par racine de mots : par exemple, si une valeur contient les chaînes commerç ou arstisan, elle sera associée à la catégorie « Artisans, commerçants et chefs d’entreprise » de la table CSP.
+
+### Amélioration de la granularité
+
+Après analyse, nous avons constaté un facteur d’échelle de 1 000 entre deux sources : l’une exprimait les valeurs en W/h, l’autre en kW/h.
+Pour harmoniser la granularité, une simple division par 1 000 des valeurs exprimées en W/h permet d’obtenir une cohérence entre les deux tables Consommation.
